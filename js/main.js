@@ -37,7 +37,40 @@ if (heroEl) {
     heroEl.querySelector('.prev').addEventListener('click', () => { goTo(current - 1); resetTimer(); });
     heroEl.querySelector('.next').addEventListener('click', () => { goTo(current + 1); resetTimer(); });
 
+    // touch swipe support
+    let touchStartX = 0;
+    heroEl.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    heroEl.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) {
+        goTo(dx < 0 ? current + 1 : current - 1);
+        resetTimer();
+      }
+    }, { passive: true });
+
     function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); }
     resetTimer();
   }
 }
+
+// ===== GALLERY COLLAPSE =====
+// Show first 8 photos per event group; rest hidden behind "Show all" button
+document.querySelectorAll('.event-group .gallery-grid').forEach(grid => {
+  const items = grid.querySelectorAll('.gallery-item');
+  if (items.length <= 8) return;
+
+  items.forEach((item, i) => {
+    if (i >= 8) item.classList.add('gallery-hidden');
+  });
+
+  const btn = document.createElement('button');
+  btn.className = 'gallery-show-more';
+  btn.textContent = `Show all ${items.length} photos`;
+  btn.addEventListener('click', () => {
+    grid.querySelectorAll('.gallery-hidden').forEach(el => el.classList.remove('gallery-hidden'));
+    btn.remove();
+  });
+  grid.after(btn);
+});
