@@ -23,6 +23,7 @@
     </button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/executives.html">Executives</a></li>
       <li><a href="pages/past-events.html">Past Events</a></li>
       <li><a href="pages/social-activity.html">Social Activity</a></li>
       <li><a href="pages/contact.html">Contact Us</a></li>
@@ -30,28 +31,66 @@
   </div>
 </nav>
 
-<!-- ===== HERO — replace with real photos once Drive folder is shared ===== -->
+<!-- ===== HERO SLIDER =====
+  TO ADD A PHOTO SLIDE from Google Drive:
+  1. Right-click photo → "Get link" → "Anyone with the link"
+  2. Get FILE_ID from: drive.google.com/file/d/FILE_ID/view
+  3. Copy the pattern below and paste inside .hero-slides before the closing </div>
+
+  <div class="hero-slide">
+    <img src="https://drive.google.com/thumbnail?id=FILE_ID&sz=w1200" alt="Brief description" />
+    <div class="caption">
+      <h1>Slide Title</h1>
+      <p>Optional subtitle text</p>
+    </div>
+  </div>
+-->
 <section class="hero">
-  <!-- One slide per hero photo. Add more .hero-slide divs as needed. -->
   <div class="hero-slides">
+
+    <!-- Slide 1: Foundation intro -->
     <div class="hero-slide" style="background:linear-gradient(135deg,#1a2a4a 0%,#2c4a7c 100%);">
       <div class="caption">
         <h1>Ek Soach Saathiya Foundation</h1>
         <p>Preserving India's cultural heritage &amp; inspiring communities through meaningful action since 2020</p>
       </div>
     </div>
+
+    <!-- Slide 2: Environment -->
     <div class="hero-slide" style="background:linear-gradient(135deg,#1a3a1a 0%,#2a5c2a 100%);">
       <div class="caption">
         <h1>Save Environment</h1>
         <p>Promoting eco-conscious living — say no to plastics, protect Maa Yamuna, and conserve wildlife</p>
       </div>
     </div>
+
+    <!-- Slide 3: Arts -->
     <div class="hero-slide" style="background:linear-gradient(135deg,#3a1a0a 0%,#7c3a0c 100%);">
       <div class="caption">
         <h1>Nurturing Young Artists</h1>
         <p>Providing a platform for classical dance, music, and the arts to help talented youth flourish</p>
       </div>
     </div>
+
+    <!-- Slide 4: Scholarships -->
+    <div class="hero-slide" style="background:linear-gradient(135deg,#2a1a3a 0%,#4a2a6a 100%);">
+      <div class="caption">
+        <h1>Scholarships &amp; Education</h1>
+        <p>&#x20B9;12,000 scholarships every year to meritorious students from financially weaker sections</p>
+      </div>
+    </div>
+
+    <!-- Slide 5: Add Drive photo here once Home Page folder is shared -->
+    <!-- Example:
+    <div class="hero-slide">
+      <img src="https://drive.google.com/thumbnail?id=FILE_ID&sz=w1200" alt="ESSF event" />
+      <div class="caption">
+        <h1>Caption Here</h1>
+        <p>Subtitle here</p>
+      </div>
+    </div>
+    -->
+
   </div>
   <button class="slider-btn prev" aria-label="Previous">&#8249;</button>
   <button class="slider-btn next" aria-label="Next">&#8250;</button>

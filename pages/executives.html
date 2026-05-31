@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executives — Ek Soach Saathiya Foundation</title>
+  <meta name="description" content="Meet the executive team behind Ek Soach Saathiya Foundation." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* ===== EXECUTIVE GRID ===== */
+    .exec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .exec-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 14px rgba(0,0,0,.09);
+      overflow: hidden;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .exec-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.13);
+    }
+
+    .exec-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, #dde4f0 0%, #b8c8e0 100%);
+    }
+
+    /* placeholder when no photo yet */
+    .exec-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #dde4f0 0%, #b8c8e0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #8a9ab8;
+    }
+
+    .exec-info {
+      padding: 1rem 1rem 1.25rem;
+      border-top: 3px solid #FF6B00;
+    }
+    .exec-info h3 {
+      color: #1a2a4a;
+      font-size: 1rem;
+      margin-bottom: .25rem;
+    }
+    .exec-info .title {
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      color: #FF6B00;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: .4rem;
+    }
+    .exec-info .bio {
+      font-size: .87rem;
+      color: #666;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <div style="width:48px;height:48px;background:rgba(255,255,255,.15);border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-family:Arial,sans-serif;">LOGO</div>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="executives.html" class="active">Executives</a></li>
+      <li><a href="past-events.html">Past Events</a></li>
+      <li><a href="social-activity.html">Social Activity</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Our Executives</h1>
+  <p>The dedicated team behind Ek Soach Saathiya Foundation</p>
+</div>
+
+<!--
+  HOW TO ADD AN EXECUTIVE (Google Drive photo):
+  1. Right-click photo in Drive → "Get link" → "Anyone with the link"
+  2. Get FILE_ID from: drive.google.com/file/d/FILE_ID/view
+  3. Copy one .exec-card block below, fill in the details.
+
+  Photo tile with Drive image:
+    <img class="exec-photo"
+         src="https://drive.google.com/thumbnail?id=FILE_ID&sz=w400"
+         alt="Name" />
+
+  If no photo yet, use the placeholder tile:
+    <div class="exec-photo-placeholder">👤</div>
+-->
+
+<section>
+  <div class="container">
+    <div class="exec-grid">
+
+      <!-- Executive 1 — replace FILE_ID and details -->
+      <div class="exec-card">
+        <div class="exec-photo-placeholder">👤</div>
+        <div class="exec-info">
+          <div class="title">Director</div>
+          <h3>Sh. Jagdish Sehgal</h3>
+          <p class="bio">Donated &#x20B9;1,00,000 to the Endowment Fund of Delhi University from personal funds.</p>
+        </div>
+      </div>
+
+      <!-- Executive 2 — replace FILE_ID and details -->
+      <div class="exec-card">
+        <div class="exec-photo-placeholder">👤</div>
+        <div class="exec-info">
+          <div class="title">Executive</div>
+          <h3>Name Here</h3>
+          <p class="bio">Brief bio or role description goes here.</p>
+        </div>
+      </div>
+
+      <!-- Executive 3 -->
+      <div class="exec-card">
+        <div class="exec-photo-placeholder">👤</div>
+        <div class="exec-info">
+          <div class="title">Executive</div>
+          <h3>Name Here</h3>
+          <p class="bio">Brief bio or role description goes here.</p>
+        </div>
+      </div>
+
+      <!-- Executive 4 -->
+      <div class="exec-card">
+        <div class="exec-photo-placeholder">👤</div>
+        <div class="exec-info">
+          <div class="title">Executive</div>
+          <h3>Name Here</h3>
+          <p class="bio">Brief bio or role description goes here.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 <span>Ek Soach Saathiya Foundation</span> &nbsp;|&nbsp; eksoach.in</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
