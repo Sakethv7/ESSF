@@ -277,12 +277,16 @@ footer span { color: var(--saffron); }
   .nav-toggle { display: block; }
   .nav { position: relative; }
 
+  .nav-logo img { height: 46px; max-width: 60%; }
+
   .hero-slide { height: 340px; }
   .hero-placeholder { height: 320px; }
 }
 
 /* mobile */
 @media (max-width: 480px) {
+  .nav-logo img { height: 38px; max-width: 70%; }
+
   .hero-slide { height: 260px; }
   .hero-placeholder { height: 240px; }
   section { padding: 2.5rem 1rem; }
