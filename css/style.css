@@ -139,6 +139,18 @@ a:hover { text-decoration: underline; }
 }
 .slider-dots span.active { background: var(--saffron); }
 
+/* ===== TAGLINE STRIP ===== */
+.tagline-strip {
+  background: var(--navy);
+  color: rgba(255,255,255,.75);
+  text-align: center;
+  padding: .55rem 1rem;
+  font-family: Arial, sans-serif;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  border-top: 2px solid var(--saffron);
+}
+
 /* ===== SECTIONS ===== */
 section { padding: 4rem 1.25rem; }
 section:nth-child(even) { background: var(--bg-light); }
