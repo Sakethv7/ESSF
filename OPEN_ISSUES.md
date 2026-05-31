@@ -59,12 +59,19 @@ Both logos are in place and live:
 
 - **Current state:** Live on GitHub Pages at `sakethv7.github.io/ESSF/` for preview only.
 - **Blocker:** Awaiting client (Monty) approval of the design.
-- **Steps once approved:**
-  1. Get FTP credentials for eksoach.in hosting server
-  2. Upload all files from `essf-website/` to `public_html/`
-  3. Exclude `.git/` and `.claude/` folders
-  4. Confirm site loads at eksoach.in
-- **Note:** All image paths are relative — no code changes needed for production deploy.
+- **Server:** 20GB hosted plan — well within limit (site is ~6MB total).
+
+**Steps once approved:**
+1. Get FTP credentials for eksoach.in from Monty/hosting provider
+2. From the project root, run: `bash deploy.sh`
+3. This creates a `_deploy/` folder with:
+   - Dev files stripped (.git, .github, .claude, *.md, deploy.sh)
+   - Cache-buster updated to current git SHA automatically
+4. Upload all contents of `_deploy/` to `public_html/` via FTP (include `.htaccess`)
+5. Verify HTTPS redirect works: `http://eksoach.in` should auto-redirect to `https://`
+6. Spot-check all 5 pages at eksoach.in
+
+**Note:** `.htaccess` handles HTTPS redirect, gzip compression, and browser cache headers — no server-side config needed beyond uploading the file.
 
 ---
 
