@@ -31,14 +31,13 @@ a:hover { text-decoration: underline; }
 .nav {
   background: var(--navy);
   position: sticky; top: 0; z-index: 100;
-  overflow: hidden; /* contain the watermark */
 }
 
 /* circular emblem watermark — right side of nav, very faint */
 .nav::after {
   content: '';
   position: absolute;
-  right: -10px; top: 50%;
+  right: 0; top: 50%;
   transform: translateY(-50%);
   width: 90px; height: 90px;
   background: url('../assets/logos/logo.png') no-repeat center / contain;
