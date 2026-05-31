@@ -43,18 +43,28 @@ if (heroEl) {
     heroEl.querySelector('.prev').addEventListener('click', () => { goTo(current - 1); resetTimer(); });
     heroEl.querySelector('.next').addEventListener('click', () => { goTo(current + 1); resetTimer(); });
 
-    // touch swipe support
+    // touch swipe (mobile)
     let touchStartX = 0;
     heroEl.addEventListener('touchstart', e => {
       touchStartX = e.touches[0].clientX;
     }, { passive: true });
     heroEl.addEventListener('touchend', e => {
       const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) {
-        goTo(dx < 0 ? current + 1 : current - 1);
-        resetTimer();
-      }
+      if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
     }, { passive: true });
+
+    // mouse drag (laptop trackpad + desktop)
+    let mouseStartX = 0, dragging = false;
+    heroEl.addEventListener('mousedown', e => {
+      mouseStartX = e.clientX;
+      dragging = true;
+    });
+    document.addEventListener('mouseup', e => {
+      if (!dragging) return;
+      dragging = false;
+      const dx = e.clientX - mouseStartX;
+      if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
+    });
 
     function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); }
     resetTimer();
