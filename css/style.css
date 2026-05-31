@@ -141,14 +141,14 @@ a:hover { text-decoration: underline; }
 
 /* ===== TAGLINE STRIP ===== */
 .tagline-strip {
-  background: var(--navy);
-  color: rgba(255,255,255,.75);
+  background: var(--bg-light);
+  color: var(--navy);
   text-align: center;
-  padding: .55rem 1rem;
+  padding: .6rem 1rem;
   font-family: Arial, sans-serif;
   font-size: .82rem;
   letter-spacing: .03em;
-  border-top: 2px solid var(--saffron);
+  border-bottom: 1px solid #ddd;
 }
 
 /* ===== SECTIONS ===== */
@@ -277,7 +277,8 @@ footer span { color: var(--saffron); }
   .nav-toggle { display: block; }
   .nav { position: relative; }
 
-  .nav-logo img { height: 46px; max-width: 60%; }
+  .nav::after { display: none; } /* hide watermark — it crowds the hamburger */
+  .nav-logo img { height: 44px; max-width: 65%; }
 
   .hero-slide { height: 340px; }
   .hero-placeholder { height: 320px; }
@@ -285,7 +286,7 @@ footer span { color: var(--saffron); }
 
 /* mobile */
 @media (max-width: 480px) {
-  .nav-logo img { height: 38px; max-width: 70%; }
+  .nav-logo img { height: 36px; max-width: 72%; }
 
   .hero-slide { height: 260px; }
   .hero-placeholder { height: 240px; }
