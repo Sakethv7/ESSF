@@ -30,14 +30,29 @@ a:hover { text-decoration: underline; }
 .nav {
   background: var(--navy);
   position: sticky; top: 0; z-index: 100;
+  overflow: hidden; /* contain the watermark */
 }
+
+/* circular emblem watermark — right side of nav, very faint */
+.nav::after {
+  content: '';
+  position: absolute;
+  right: -10px; top: 50%;
+  transform: translateY(-50%);
+  width: 90px; height: 90px;
+  background: url('../assets/logos/logo.png') no-repeat center / contain;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
 .nav-inner {
   max-width: 1100px; margin: auto;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 1.25rem;
+  min-height: 70px; /* taller nav so ek1logo renders bigger */
 }
-.nav-logo { display: flex; align-items: center; gap: .6rem; padding: .6rem 0; }
-.nav-logo img { height: 48px; width: auto; }
+.nav-logo { display: flex; align-items: center; gap: .6rem; padding: .5rem 0; }
+.nav-logo img { height: 58px; width: auto; } /* up from 46px */
 .nav-logo span {
   color: var(--white); font-size: 1rem; font-weight: bold;
   line-height: 1.2; display: none;
