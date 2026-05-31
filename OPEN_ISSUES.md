@@ -4,18 +4,11 @@ Last updated: 2026-05-31
 
 ---
 
-## 1. Logos — replacements needed
+## ~~1. Logos~~ — RESOLVED ✅
 
-### 1a. Circular emblem (logo.png)
-- **Current file:** `assets/logos/logo.png` — 93×93px, 16KB. Functional but low-res.
-- **Better version available:** Full-quality circular logo exists on Drive but could not be downloaded (Drive permissions). Screenshot captured in session.
-- **What's needed:** Monty/client shares the file directly (WhatsApp, email, or fixes Drive permissions on `ek1logo.png`, file ID `18EKaAK9sdECLwxQ7G16LH8AwWIZrwdvr`).
-- **Where it goes:** Replace `assets/logos/logo.png`. Used in nav icon + favicon on all 5 pages.
-
-### 1b. Horizontal banner logo (ek1logo)
-- **Current state:** Not on site. Screenshot captured showing: circular seal + "Ek Soach Saathiya Foundation" in bold blue + "(A Foundation of CGST & Customs Officers (Retired & Serving), Delhi)" tagline.
-- **What's needed:** Original PNG file from Monty (same Drive file, just needs permissions fixed).
-- **Where it goes:** `assets/logos/ek1logo.png` — intended to replace the current nav logo area (image + text span) with a single clean banner. Especially good for desktop nav.
+Both logos are in place and live:
+- `assets/logos/ek1logo.png` — horizontal banner used in nav on all 5 pages
+- `assets/logos/logo.png` — circular emblem used as favicon + faint nav watermark
 
 ---
 

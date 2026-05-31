@@ -48,8 +48,9 @@ essf-website/
 │   │   │   └── 09-07-2023/   (140 photos — Kavi Sammelan with Musical Program)
 │   │   └── social/        (8 photos — donations, clay bottles, covid relief)
 │   └── logos/
-│       ├── logo.png       (circular emblem, 93×93, used in nav + favicon)
-│       └── fav5.png       (horizontal banner logo, 400×76)
+│       ├── ek1logo.png    (horizontal banner — circular seal + org name + tagline, used in nav on all pages)
+│       ├── logo.png       (circular emblem — used as favicon + nav watermark at 9% opacity)
+│       └── fav5.png       (alternative favicon)
 ├── css/
 │   └── style.css
 └── js/
