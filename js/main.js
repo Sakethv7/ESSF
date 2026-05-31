@@ -53,18 +53,27 @@ if (heroEl) {
       if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
     }, { passive: true });
 
-    // mouse drag (laptop trackpad + desktop)
+    // mouse drag (desktop click-and-drag)
     let mouseStartX = 0, dragging = false;
-    heroEl.addEventListener('mousedown', e => {
-      mouseStartX = e.clientX;
-      dragging = true;
-    });
+    heroEl.addEventListener('mousedown', e => { mouseStartX = e.clientX; dragging = true; });
     document.addEventListener('mouseup', e => {
       if (!dragging) return;
       dragging = false;
       const dx = e.clientX - mouseStartX;
       if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
     });
+
+    // trackpad two-finger horizontal swipe (macOS)
+    let wheeling = false;
+    heroEl.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return; // ignore vertical scroll
+      e.preventDefault();
+      if (wheeling) return;
+      wheeling = true;
+      goTo(e.deltaX > 0 ? current + 1 : current - 1);
+      resetTimer();
+      setTimeout(() => { wheeling = false; }, 800); // block until transition finishes
+    }, { passive: false });
 
     function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); }
     resetTimer();
