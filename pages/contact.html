@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Ek Soach Saathiya Foundation</title>
+  <meta name="description" content="Get in touch with Ek Soach Saathiya Foundation — address, email, and location." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.09);
+      padding: 2.5rem 2rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .contact-row {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 1.25rem 0; border-bottom: 1px solid #eee;
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row .icon { font-size: 1.75rem; flex-shrink: 0; width: 40px; text-align: center; }
+    .contact-row h3 { color: #1a2a4a; font-size: 1rem; margin-bottom: .25rem; font-family: Arial, sans-serif; }
+    .contact-row p, .contact-row a { color: #555; font-size: .97rem; }
+    .contact-row a { color: #FF6B00; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    .map-placeholder {
+      background: linear-gradient(135deg, #dde4f0 0%, #b8c8e0 100%);
+      border-radius: 8px; height: 260px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 1rem;
+      font-family: Arial, sans-serif; color: #5a6a8a;
+      margin-top: 2rem; max-width: 640px; margin-left: auto; margin-right: auto;
+    }
+    .map-placeholder p { font-size: .9rem; line-height: 1.6; }
+    .map-placeholder a { color: #0969da; font-size: .95rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <div style="width:48px;height:48px;background:rgba(255,255,255,.15);border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-family:Arial,sans-serif;">LOGO</div>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="past-events.html">Past Events</a></li>
+      <li><a href="social-activity.html">Social Activity</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you — reach out for collaborations, donations, or enquiries</p>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="contact-card">
+
+      <div class="contact-row">
+        <div class="icon">📍</div>
+        <div>
+          <h3>Address</h3>
+          <p>189, Siddharth Enclave<br>New Delhi — 110014<br>India</p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">✉️</div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:essfdelhi@gmail.com">essfdelhi@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">🌐</div>
+        <div>
+          <h3>Website</h3>
+          <p>eksoach.in</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map placeholder — replace with a Google Maps embed iframe once approved -->
+    <div class="map-placeholder">
+      <div>
+        <p>189, Siddharth Enclave, New Delhi — 110014</p>
+        <br>
+        <a href="https://maps.google.com/?q=189+Siddharth+Enclave+New+Delhi+110014" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 <span>Ek Soach Saathiya Foundation</span> &nbsp;|&nbsp; eksoach.in</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
