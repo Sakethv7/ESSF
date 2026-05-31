@@ -141,8 +141,8 @@ a:hover { text-decoration: underline; }
 
 /* ===== TAGLINE STRIP ===== */
 .tagline-strip {
-  background: #f0ece6 !important;
-  color: #1a2a4a !important;
+  background: #f0ece6;
+  color: #1a2a4a;
   text-align: center;
   padding: .65rem 1rem;
   font-family: Arial, sans-serif;

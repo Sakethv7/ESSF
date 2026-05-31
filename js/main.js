@@ -5,9 +5,11 @@ if (toggle && navLinks) {
   toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 }
 
-// mark active nav link
+// mark active nav link — compare by pathname to avoid query-string mismatches
 document.querySelectorAll('.nav-links a').forEach(a => {
-  if (a.href === location.href) a.classList.add('active');
+  try {
+    if (new URL(a.href).pathname === location.pathname) a.classList.add('active');
+  } catch (_) {}
 });
 
 // ===== HERO SLIDER =====
@@ -22,6 +24,8 @@ if (heroEl) {
   if (allSlides.length > 1) {
     allSlides.forEach((_, i) => {
       const dot = document.createElement('span');
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
       if (i === 0) dot.classList.add('active');
       dot.addEventListener('click', () => goTo(i));
       dotsContainer.appendChild(dot);
@@ -30,8 +34,10 @@ if (heroEl) {
     function goTo(n) {
       current = (n + allSlides.length) % allSlides.length;
       slides.style.transform = `translateX(-${current * 100}%)`;
-      dotsContainer.querySelectorAll('span').forEach((d, i) =>
-        d.classList.toggle('active', i === current));
+      dotsContainer.querySelectorAll('span').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+        d.setAttribute('aria-label', `Go to slide ${i + 1}${i === current ? ' (current)' : ''}`);
+      });
     }
 
     heroEl.querySelector('.prev').addEventListener('click', () => { goTo(current - 1); resetTimer(); });
@@ -68,6 +74,7 @@ document.querySelectorAll('.event-group .gallery-grid').forEach(grid => {
   const btn = document.createElement('button');
   btn.className = 'gallery-show-more';
   btn.textContent = `Show all ${items.length} photos`;
+  btn.setAttribute('aria-label', `Show all ${items.length} photos in this event`);
   btn.addEventListener('click', () => {
     grid.querySelectorAll('.gallery-hidden').forEach(el => el.classList.remove('gallery-hidden'));
     btn.remove();
