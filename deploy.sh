@@ -19,6 +19,7 @@ rm -rf _deploy/.claude
 rm -rf _deploy/_deploy
 rm -f  _deploy/deploy.sh
 rm -f  _deploy/*.md
+rm -f  _deploy/FOR_MONTY.html
 rm -f  _deploy/SESSION_HANDOFF*
 rm -rf _deploy/skills/
 

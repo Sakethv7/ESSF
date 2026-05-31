@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESSF Website — Content Needed</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.7; }
+
+    .header {
+      background: #1a2a4a; color: #fff;
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    .header h1 { font-size: 1.6rem; margin-bottom: .4rem; }
+    .header p  { opacity: .8; font-size: .95rem; }
+    .header a  { color: #FF6B00; font-weight: bold; }
+
+    .container { max-width: 860px; margin: 2rem auto; padding: 0 1.25rem 4rem; }
+
+    .intro {
+      background: #fff; border-radius: 8px;
+      border-left: 5px solid #FF6B00;
+      padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+      font-size: .97rem;
+    }
+
+    h2 {
+      font-size: 1.25rem; color: #1a2a4a;
+      margin: 2rem 0 1rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid #FF6B00;
+    }
+
+    /* ---- NUMBERS GRID ---- */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .number-card {
+      background: #fff; border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      padding: 1.25rem 1rem; text-align: center;
+    }
+    .number-card .icon { font-size: 2rem; margin-bottom: .5rem; }
+    .number-card .value {
+      font-size: 1.8rem; font-weight: bold; color: #FF6B00;
+      margin-bottom: .25rem;
+    }
+    .number-card .label { font-size: .85rem; color: #555; }
+    .blank { border: 2px dashed #ccc; background: #fafafa; }
+    .blank .value { color: #bbb; font-size: 1.1rem; font-weight: normal; }
+
+    /* ---- CHECKLIST ---- */
+    .checklist { display: flex; flex-direction: column; gap: .6rem; }
+    .item {
+      background: #fff; border-radius: 6px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .item .icon { font-size: 1.4rem; flex-shrink: 0; margin-top: .1rem; }
+    .item .text strong { display: block; color: #1a2a4a; margin-bottom: .15rem; }
+    .item .text span { font-size: .88rem; color: #666; }
+
+    .tag {
+      display: inline-block; border-radius: 20px;
+      font-size: .75rem; font-weight: bold;
+      padding: .15rem .6rem; margin-left: .5rem;
+      vertical-align: middle;
+    }
+    .tag-new   { background: #e6f4ea; color: #1e7e34; }
+    .tag-more  { background: #fff3e0; color: #e65100; }
+    .tag-less  { background: #fce4ec; color: #c62828; }
+    .tag-info  { background: #e3f2fd; color: #1565c0; }
+
+    .note {
+      background: #fffbe6; border: 1px solid #ffe082;
+      border-radius: 6px; padding: 1rem 1.25rem;
+      font-size: .9rem; color: #555; margin-top: 2rem;
+    }
+
+    .preview-link {
+      display: inline-block; margin-top: .75rem;
+      background: #FF6B00; color: #fff;
+      padding: .6rem 1.5rem; border-radius: 4px;
+      text-decoration: none; font-weight: bold; font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ek Soach Saathiya Foundation — Website Content Request</h1>
+  <p>Preview the current site: <a href="https://sakethv7.github.io/ESSF/" target="_blank" rel="noopener noreferrer">sakethv7.github.io/ESSF</a></p>
+  <a class="preview-link" href="https://sakethv7.github.io/ESSF/" target="_blank" rel="noopener noreferrer">Open Website Preview →</a>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    The website is ready for review. Before we go live on <strong>eksoach.in</strong>, we need a few things from you.
+    Please go through the list below and share whatever is available.
+    Items marked <span class="tag tag-new">NEW</span> are additions. <span class="tag tag-more">MORE NEEDED</span> means we have some but need more. <span class="tag tag-less">REDUCE</span> means we will use fewer of these. <span class="tag tag-info">CONFIRM</span> means we just need a quick yes/no.
+  </div>
+
+  <!-- ===== IMPACT NUMBERS ===== -->
+  <h2>1. Impact Numbers — Please Fill In</h2>
+  <p style="font-size:.9rem;color:#666;margin-bottom:1rem;">These will appear on the website as key achievements. Please share the correct numbers.</p>
+
+  <div class="numbers-grid">
+
+    <div class="number-card">
+      <div class="icon">🎓</div>
+      <div class="value">₹12,000 / yr</div>
+      <div class="label">Scholarship per student<br><em>How many students total?</em></div>
+    </div>
+
+    <div class="number-card blank">
+      <div class="icon">👦</div>
+      <div class="value">[ ? ] Students</div>
+      <div class="label">Total scholarship recipients<br>since 2020</div>
+    </div>
+
+    <div class="number-card">
+      <div class="icon">💸</div>
+      <div class="value">₹3,50,000+</div>
+      <div class="label">Donated to relief funds<br>(HP + Uttarakhand + DU)</div>
+    </div>
+
+    <div class="number-card blank">
+      <div class="icon">🌿</div>
+      <div class="value">[ ? ] Items</div>
+      <div class="label">Eco items distributed<br>(jute bags + clay bottles)</div>
+    </div>
+
+    <div class="number-card">
+      <div class="icon">📅</div>
+      <div class="value">3 Events</div>
+      <div class="label">Major events organised<br>2023 – 2024</div>
+    </div>
+
+    <div class="number-card blank">
+      <div class="icon">📆</div>
+      <div class="value">[ ? ] Calendars</div>
+      <div class="label">Yearly wall calendars<br>distributed so far</div>
+    </div>
+
+  </div>
+
+  <!-- ===== PHOTOS NEEDED ===== -->
+  <h2>2. Photos — Please Share</h2>
+
+  <div class="checklist">
+
+    <div class="item">
+      <div class="icon">👦</div>
+      <div class="text">
+        <strong>Kids receiving awards / scholarships <span class="tag tag-more">MORE NEEDED</span></strong>
+        <span>Close-up shots of children receiving certificates or awards on stage. The more personal the better — smiling faces, handshakes, proud moments.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">💃</div>
+      <div class="text">
+        <strong>Kids performing on stage <span class="tag tag-more">MORE NEEDED</span></strong>
+        <span>Dance, music, or any art performance by children. Action shots during the performance preferred.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">🌊</div>
+      <div class="text">
+        <strong>Yamuna cleaning drive <span class="tag tag-new">NEW</span></strong>
+        <span>Any photos from Yamuna cleaning or conservation activities organised by ESSF. Before/after shots especially welcome.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">🌱</div>
+      <div class="text">
+        <strong>Environment / nature photos <span class="tag tag-more">MORE NEEDED</span></strong>
+        <span>Tree plantations, save environment campaigns, sapling distribution, any outdoor environment activities.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">👜</div>
+      <div class="text">
+        <strong>Jute bag distribution <span class="tag tag-new">NEW</span></strong>
+        <span>Photos from jute bag distribution events. Currently no photos on the site for this activity.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">📅</div>
+      <div class="text">
+        <strong>Yearly calendar release / distribution <span class="tag tag-new">NEW</span></strong>
+        <span>Photos of the annual wall calendar being released or distributed. The calendar design itself is also welcome.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">👥</div>
+      <div class="text">
+        <strong>Audience / crowd at events <span class="tag tag-new">NEW</span></strong>
+        <span>Wide shots showing the hall/venue filled with attendees. Shows the scale and community reach of ESSF events.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">🏆</div>
+      <div class="text">
+        <strong>Trophy / award photos — reduce <span class="tag tag-less">REDUCE</span></strong>
+        <span>We have many trophy photos. Please note: if sharing more, prefer shots that include children or people receiving them rather than just the trophies alone.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== EXECUTIVES ===== -->
+  <h2>3. Executive Team — Details Needed</h2>
+
+  <div class="checklist">
+
+    <div class="item">
+      <div class="icon">👤</div>
+      <div class="text">
+        <strong>3 Executive Members <span class="tag tag-new">NEW</span></strong>
+        <span>For each person we need: Full name · Designation/title · One line bio · Photo (WhatsApp or Google Drive is fine).</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== CONFIRM ===== -->
+  <h2>4. Quick Confirmations</h2>
+
+  <div class="checklist">
+
+    <div class="item">
+      <div class="icon">❓</div>
+      <div class="text">
+        <strong>7 April 2024 event name <span class="tag tag-info">CONFIRM</span></strong>
+        <span>Is <em>"Annual Felicitation Ceremony"</em> the correct name for the event held on 7 April 2024? Or is there a different official name?</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">📞</div>
+      <div class="text">
+        <strong>Contact phone number <span class="tag tag-info">CONFIRM</span></strong>
+        <span>Should a phone number appear on the Contact page? If yes, please share the number.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">🏅</div>
+      <div class="text">
+        <strong>Scholarship recipient names <span class="tag tag-info">CONFIRM</span></strong>
+        <span>Do you want students' names listed under their photos in the gallery? If yes, please share names paired to photos (e.g. "photo 20 = Priya Sharma").</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">💬</div>
+      <div class="text">
+        <strong>Testimonial from a student or parent <span class="tag tag-new">NEW</span></strong>
+        <span>A short quote (2–3 lines) from a scholarship recipient or their parent about ESSF's impact. Very powerful for the website. Optional but recommended.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    📌 <strong>How to share:</strong> WhatsApp photos directly, or add to the shared Google Drive folder. For confirmations, a WhatsApp reply is fine.<br><br>
+    📌 <strong>Current preview:</strong> <a href="https://sakethv7.github.io/ESSF/" target="_blank" rel="noopener noreferrer">sakethv7.github.io/ESSF</a> — please review on your phone and laptop and share feedback.
+  </div>
+
+</div>
+</body>
+</html>
