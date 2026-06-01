@@ -13,49 +13,72 @@
       padding: 2.5rem 2rem; text-align: center;
     }
     .header h1 { font-size: 1.6rem; margin-bottom: .3rem; }
-    .header .sub { opacity: .7; font-size: .9rem; margin-bottom: 1rem; }
+    .header .sub { opacity: .7; font-size: .9rem; }
     .header .meta {
-      display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
-      font-size: .85rem; opacity: .85; margin-top: .75rem;
+      display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+      font-size: .85rem; opacity: .85; margin-top: 1rem;
     }
     .header .meta span { background: rgba(255,255,255,.1); padding: .25rem .75rem; border-radius: 20px; }
 
     .container { max-width: 900px; margin: 2rem auto; padding: 0 1.25rem 5rem; }
 
     h2 {
-      font-size: 1.2rem; color: #1a2a4a;
+      font-size: 1.15rem; color: #1a2a4a;
       margin: 2.5rem 0 1rem;
       padding-bottom: .4rem;
       border-bottom: 3px solid #FF6B00;
-      display: flex; align-items: center; gap: .6rem;
+      display: flex; align-items: center; gap: .75rem;
     }
-    h2 .num {
-      background: #FF6B00; color: #fff;
-      width: 28px; height: 28px; border-radius: 50%;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: .85rem; flex-shrink: 0;
+    .badge {
+      font-size: .72rem; font-weight: bold; letter-spacing: .05em;
+      padding: .2rem .7rem; border-radius: 20px; white-space: nowrap;
     }
+    .badge-done    { background: #e6f4ea; color: #1e7e34; }
+    .badge-next    { background: #fff3e0; color: #e65100; }
+    .badge-ongoing { background: #e3f2fd; color: #1565c0; }
+    .badge-future  { background: #f3e5f5; color: #6a1b9a; }
 
     /* WORK ITEMS */
-    .work-list { display: flex; flex-direction: column; gap: .75rem; }
+    .work-list { display: flex; flex-direction: column; gap: .65rem; }
     .work-item {
       background: #fff; border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,.07);
-      display: grid; grid-template-columns: 2.5rem 1fr;
-      align-items: start; gap: 1rem; padding: 1rem 1.25rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,.07);
+      display: grid; grid-template-columns: 2.2rem 1fr;
+      align-items: start; gap: .9rem; padding: .9rem 1.25rem;
     }
-    .work-item .icon { font-size: 1.5rem; padding-top: .1rem; }
-    .work-item .info strong { display: block; color: #1a2a4a; font-size: .97rem; margin-bottom: .2rem; }
-    .work-item .info p { font-size: .85rem; color: #666; }
+    .work-item .icon { font-size: 1.4rem; padding-top: .15rem; }
+    .work-item .info strong { display: block; color: #1a2a4a; font-size: .95rem; margin-bottom: .15rem; }
+    .work-item .info p { font-size: .84rem; color: #666; }
 
-    /* SUMMARY BOX */
-    .summary-box {
-      background: #1a2a4a; color: #fff;
-      border-radius: 8px; padding: 1.25rem 1.5rem;
-      margin-top: 1rem;
+    /* STATUS BOX */
+    .status-box {
+      border-radius: 8px; padding: 1.1rem 1.4rem;
+      margin-top: .75rem; font-size: .9rem;
     }
-    .summary-box .label { font-size: 1rem; font-weight: bold; margin-bottom: .25rem; }
-    .summary-box .range { font-size: .88rem; opacity: .75; }
+    .status-box.green  { background: #e6f4ea; border-left: 4px solid #1e7e34; color: #1a4a1e; }
+    .status-box.orange { background: #fff3e0; border-left: 4px solid #e65100; color: #4a2800; }
+
+    /* NEXT STEPS */
+    .step-list { display: flex; flex-direction: column; gap: .65rem; }
+    .step-item {
+      background: #fff; border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,.07);
+      display: grid; grid-template-columns: 2.2rem 1fr;
+      gap: .9rem; padding: .9rem 1.25rem; align-items: start;
+    }
+    .step-item .num {
+      background: #FF6B00; color: #fff;
+      width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; font-weight: bold; flex-shrink: 0; margin-top: .2rem;
+    }
+    .step-item strong { display: block; color: #1a2a4a; font-size: .95rem; margin-bottom: .15rem; }
+    .step-item p { font-size: .84rem; color: #666; }
+    .step-item .blocker {
+      display: inline-block; margin-top: .3rem;
+      font-size: .78rem; background: #fff3e0; color: #e65100;
+      padding: .1rem .5rem; border-radius: 4px; font-weight: bold;
+    }
 
     /* MAINTENANCE */
     .plan-grid {
@@ -65,8 +88,8 @@
     }
     .plan-card {
       background: #fff; border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,.07);
-      padding: 1.25rem; text-align: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,.07);
+      padding: 1.25rem;
     }
     .plan-card.recommended { border: 2px solid #FF6B00; }
     .plan-card .rec-tag {
@@ -76,29 +99,28 @@
       display: inline-block; margin-bottom: .5rem;
     }
     .plan-card h3 { color: #1a2a4a; font-size: 1rem; margin-bottom: .5rem; }
-    .plan-card ul { list-style: none; text-align: left; font-size: .83rem; color: #555; margin-top: .5rem; }
+    .plan-card ul { list-style: none; font-size: .83rem; color: #555; }
     .plan-card ul li { padding: .2rem 0; padding-left: 1.2rem; position: relative; }
     .plan-card ul li::before { content: '✓'; position: absolute; left: 0; color: #138808; font-weight: bold; }
 
     /* ENHANCEMENTS */
-    .enhancements { width: 100%; border-collapse: collapse; margin-top: .5rem; }
-    .enhancements th {
-      background: #1a2a4a; color: #fff;
-      padding: .75rem 1rem; text-align: left; font-size: .88rem;
-    }
-    .enhancements td { padding: .75rem 1rem; font-size: .88rem; border-bottom: 1px solid #eee; background: #fff; }
-    .enhancements tr:last-child td { border-bottom: none; }
-    .enhancements tr:hover td { background: #fafafa; }
-    .enhancements td .desc { font-size: .78rem; color: #888; display: block; margin-top: .15rem; }
-
-    /* PROD PUSH */
-    .push-box {
+    .enhance-list { display: flex; flex-direction: column; gap: .65rem; }
+    .enhance-item {
       background: #fff; border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,.07);
-      padding: 1.25rem 1.5rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,.07);
+      padding: .9rem 1.25rem;
     }
-    .push-box strong { display: block; color: #1a2a4a; margin-bottom: .25rem; }
-    .push-box p { font-size: .85rem; color: #666; }
+    .enhance-item strong { color: #1a2a4a; font-size: .95rem; }
+    .enhance-item .explain { font-size: .84rem; color: #666; margin-top: .15rem; }
+    .enhance-item .tag-row { margin-top: .35rem; }
+    .etag {
+      display: inline-block; font-size: .72rem; font-weight: bold;
+      padding: .1rem .5rem; border-radius: 4px; margin-right: .3rem;
+    }
+    .etag-easy   { background: #e6f4ea; color: #1e7e34; }
+    .etag-medium { background: #fff3e0; color: #e65100; }
+    .etag-big    { background: #fce4ec; color: #c62828; }
+    .etag-nice   { background: #f3e5f5; color: #6a1b9a; }
 
     .note {
       background: #fffbe6; border: 1px solid #ffe082;
@@ -111,7 +133,7 @@
 
 <div class="header">
   <h1>Ek Soach Saathiya Foundation — Website Project</h1>
-  <p class="sub">Work Summary & Maintenance Proposal</p>
+  <p class="sub">Work Summary & Proposal</p>
   <div class="meta">
     <span>📅 May 2026</span>
     <span>🌐 eksoach.in</span>
@@ -121,8 +143,8 @@
 
 <div class="container">
 
-  <!-- SECTION 1 -->
-  <h2><span class="num">1</span> Work Delivered — Initial Build</h2>
+  <!-- ===== SECTION 1: DONE ===== -->
+  <h2>1 — What Has Been Done <span class="badge badge-done">✓ COMPLETE</span></h2>
 
   <div class="work-list">
 
@@ -130,7 +152,7 @@
       <div class="icon">🖥️</div>
       <div class="info">
         <strong>5-Page Custom Website</strong>
-        <p>Built from scratch — Home, Executives, Past Events, Social Activity, Contact. Pure HTML/CSS/JS, no frameworks. Designed to load fast even on slow mobile connections. Includes hero slider, activity cards, photo gallery, and footer.</p>
+        <p>Home, Executives, Past Events, Social Activity, Contact — built from scratch with no paid templates or frameworks. Designed to load fast even on slow mobile connections.</p>
       </div>
     </div>
 
@@ -138,75 +160,97 @@
       <div class="icon">📱</div>
       <div class="info">
         <strong>Fully Responsive Design</strong>
-        <p>Works on all screen sizes — iPhone, Android, iPad, laptop, and desktop. Separate layouts for mobile (≤480px), tablet (≤900px), and desktop. Navigation becomes a hamburger menu on smaller screens with a fixed iOS-compatible touch target.</p>
+        <p>Tested and working on iPhone, Android, iPad, MacBook, and desktop. The navigation collapses into a hamburger menu on phones and tablets with a properly sized tap target for iOS.</p>
       </div>
     </div>
 
     <div class="work-item">
       <div class="icon">🖼️</div>
       <div class="info">
-        <strong>221 Photos — Compressed & Organised</strong>
-        <p>All photos received were compressed to optimised thumbnails (~25KB each) using a Python script, reducing total size from several GBs to ~6MB. Organised into dated event folders. Past Events page shows first 8 photos per event with a "Show all" button to avoid endless scrolling.</p>
+        <strong>221 Photos Compressed & Organised</strong>
+        <p>All photos were compressed from several GBs down to ~6MB total without visible quality loss. Organised into dated event folders. Past Events shows 8 photos at a time with a "Show all" button so the page doesn't require endless scrolling.</p>
       </div>
     </div>
 
     <div class="work-item">
       <div class="icon">🎠</div>
       <div class="info">
-        <strong>Hero Slider — Touch, Swipe & Trackpad</strong>
-        <p>4-slide hero banner with auto-advance every 5 seconds. Supports: tap on arrow buttons, dot navigation, finger swipe on mobile, two-finger trackpad swipe on MacBook, and click-and-drag on desktop mouse.</p>
+        <strong>Hero Slider with Full Swipe Support</strong>
+        <p>4-slide banner that auto-advances every 5 seconds. Works with: tap on arrows, dot buttons, finger swipe on mobile, two-finger trackpad swipe on MacBook, and click-and-drag on desktop.</p>
       </div>
     </div>
 
     <div class="work-item">
       <div class="icon">⚙️</div>
       <div class="info">
-        <strong>CI/CD Pipeline & Deploy Tooling</strong>
-        <p>GitHub Actions workflow that automatically updates cache-busting version strings on every code push, so visitors always get the latest CSS and JS. One-command deploy script that packages the site for FTP upload to the production server — strips dev files, injects version strings, outputs a clean folder ready to upload.</p>
+        <strong>Automated Deployment Pipeline</strong>
+        <p>Every code push automatically updates the site so visitors always see the latest version — no manual steps needed. A one-command deploy script packages everything for upload to the production server.</p>
       </div>
     </div>
 
     <div class="work-item">
       <div class="icon">🔒</div>
       <div class="info">
-        <strong>Security Audit & Hardening</strong>
-        <p>Full security review — checked all external links, verified no XSS risks, no inline event handlers, no exposed credentials. Added Apache configuration with HTTPS redirect, gzip compression, browser cache headers (1 year for assets), and security response headers.</p>
-      </div>
-    </div>
-
-    <div class="work-item">
-      <div class="icon">♿</div>
-      <div class="info">
-        <strong>Accessibility</strong>
-        <p>ARIA labels on all interactive elements (slider dots, show-more button, hamburger menu). Keyboard-navigable nav. Proper alt text on all images. Semantic HTML structure throughout. Screen reader compatible.</p>
+        <strong>Security & Performance</strong>
+        <p>Full security review completed. Production server configured with: automatic HTTPS redirect, compressed file delivery (gzip), long-term browser caching for fast repeat visits, and standard security response headers.</p>
       </div>
     </div>
 
     <div class="work-item">
       <div class="icon">🐛</div>
       <div class="info">
-        <strong>Iterations, Debugging & Testing</strong>
-        <p>iOS hamburger menu fix, browser cache-busting across multiple rounds of deployment, slider overflow fix, nav logo responsive sizing across 3 breakpoints, tagline strip styling, gallery collapse feature, trackpad swipe detection.</p>
+        <strong>Testing, Bug Fixes & Accessibility</strong>
+        <p>iOS hamburger menu fixed, caching issues resolved, slider overflow corrected. All interactive elements labelled for screen readers. Tested across iPhone Safari, Chrome Android, MacBook, and desktop.</p>
       </div>
     </div>
 
   </div>
 
-  <div class="summary-box">
-    <div class="label">✅ Initial Build — Complete</div>
-    <div class="range">Fully tested across mobile / tablet / desktop / iOS / macOS. Ready for production deployment.</div>
+  <div class="status-box green">
+    ✅ Website is live at <strong>sakethv7.github.io/ESSF</strong> — fully functional, tested, and ready for client review before going live on eksoach.in.
   </div>
 
-  <!-- SECTION 2 -->
-  <h2><span class="num">2</span> Production Push — Deploy to eksoach.in</h2>
+  <!-- ===== SECTION 2: NEXT STEPS ===== -->
+  <h2>2 — What Needs to Happen Next <span class="badge badge-next">PENDING</span></h2>
 
-  <div class="push-box">
-    <strong>One-time production deployment</strong>
-    <p>Run deploy script → FTP upload to hosting server → configure custom domain → verify HTTPS, all 5 pages, and mobile layout on live domain. Fix any hosting-specific issues that arise.</p>
+  <div class="step-list">
+
+    <div class="step-item">
+      <div class="num">A</div>
+      <div>
+        <strong>Client Approval</strong>
+        <p>Monty reviews the preview site and confirms he is happy with the design, content, and layout.</p>
+        <span class="blocker">⏳ Waiting on Monty</span>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="num">B</div>
+      <div>
+        <strong>Missing Content from Monty</strong>
+        <p>3 executive names, photos & designations · Correct name for the April 2024 event · Phone number for Contact page · Scholarship recipient names (optional) · Testimonial quote from a student or parent (optional)</p>
+        <span class="blocker">⏳ Waiting on Monty</span>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="num">C</div>
+      <div>
+        <strong>Production Deployment to eksoach.in</strong>
+        <p>Once approved: run the deploy script, upload files to the hosting server via FTP, verify HTTPS is working, and confirm all pages load correctly on the live domain.</p>
+        <span class="blocker">⏳ Requires FTP credentials from Monty</span>
+      </div>
+    </div>
+
   </div>
 
-  <!-- SECTION 3 -->
-  <h2><span class="num">3</span> Maintenance Plans</h2>
+  <div class="status-box orange">
+    ⚠️ The site cannot go live until A, B (at minimum name + approval), and C are complete.
+  </div>
+
+  <!-- ===== SECTION 3: MAINTENANCE ===== -->
+  <h2>3 — Maintenance Plans <span class="badge badge-ongoing">ONGOING</span></h2>
+  <p style="font-size:.88rem;color:#666;margin-bottom:.75rem;">After the site goes live, ongoing support ensures the website stays updated, secure, and relevant.</p>
 
   <div class="plan-grid">
 
@@ -226,7 +270,7 @@
       <h3>Standard</h3>
       <ul>
         <li>Up to 5 content updates / year</li>
-        <li>Add new event photos (up to 3 events)</li>
+        <li>New event photos (up to 3 events/year)</li>
         <li>Executive card updates</li>
         <li>Minor design tweaks</li>
         <li>Hosting + domain assistance</li>
@@ -239,7 +283,7 @@
       <ul>
         <li>Unlimited content updates</li>
         <li>New event pages as needed</li>
-        <li>New sections / features (small)</li>
+        <li>Small new features on request</li>
         <li>Priority response within 24 hrs</li>
         <li>Annual design refresh</li>
         <li>Performance monitoring</li>
@@ -248,62 +292,70 @@
 
   </div>
 
-  <!-- SECTION 4 -->
-  <h2><span class="num">4</span> Future Enhancements — Per Request</h2>
+  <!-- ===== SECTION 4: ENHANCEMENTS ===== -->
+  <h2>4 — Future Enhancements <span class="badge badge-future">ON REQUEST</span></h2>
+  <p style="font-size:.88rem;color:#666;margin-bottom:.75rem;">These can be added any time after the site goes live, one at a time.</p>
 
-  <table class="enhancements">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>What it involves</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Impact / Numbers Section<span class="desc">e.g. "₹3.5L donated · 40 students · 3 events"</span></td>
-        <td>New section on home page with stats provided by client</td>
-      </tr>
-      <tr>
-        <td>Hindi Language Support<span class="desc">Bilingual content in Devanagari</span></td>
-        <td>Language toggle, translated content provided by client, font loading</td>
-      </tr>
-      <tr>
-        <td>Contact Form with Email<span class="desc">Visitor sends message directly from website</span></td>
-        <td>Form UI + email delivery via third-party service (no server needed)</td>
-      </tr>
-      <tr>
-        <td>New Event Page<span class="desc">Each new annual event added to Past Events</span></td>
-        <td>Compress & add photos, create event block, update photo count</td>
-      </tr>
-      <tr>
-        <td>Testimonials Section<span class="desc">Quotes from scholarship recipients / parents</span></td>
-        <td>New section on home page with photo + quote cards</td>
-      </tr>
-      <tr>
-        <td>Donation / Bank Details Page<span class="desc">Static page with UPI, bank details for donors</span></td>
-        <td>New inner page, nav update, QR code if provided</td>
-      </tr>
-      <tr>
-        <td>Google Maps Embed<span class="desc">Interactive map on Contact page</span></td>
-        <td>Replace current link with embedded map</td>
-      </tr>
-      <tr>
-        <td>CMS Integration<span class="desc">So client can update content without a developer</span></td>
-        <td>Migrate to a headless CMS. Significant rebuild.</td>
-      </tr>
-      <tr>
-        <td>WhatsApp Chat Button<span class="desc">Floating button to message on WhatsApp</span></td>
-        <td>Sticky floating button, pre-filled message, all pages</td>
-      </tr>
-      <tr>
-        <td>Social Media Feed<span class="desc">Live Instagram / Facebook posts on site</span></td>
-        <td>Embedded feed widget, requires social account access</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="enhance-list">
+
+    <div class="enhance-item">
+      <strong>🎖️ Impact / Numbers Section</strong>
+      <p class="explain">A strip on the home page showing key achievements — total students supported, amount donated, events held, years active. Numbers provided by Monty. Very effective for first-time visitors and potential donors.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>💬 Testimonials Section</strong>
+      <p class="explain">Quotes from scholarship recipients, students, or parents about the impact ESSF has had. Displayed as cards with a photo and a short quote. One of the most powerful trust-builders on any NGO website.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span><span class="etag etag-nice">High impact</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>🏦 Donation / Bank Details Page</strong>
+      <p class="explain">A dedicated page showing UPI ID, bank account number, IFSC code, and optionally a QR code — for anyone who wants to donate to the foundation. Currently there is no donation information on the site.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>🐦 X (Twitter) Feed</strong>
+      <p class="explain">Once the ESSF X account is created, a live feed of recent posts can be embedded on the home page or Social Activity page. Visitors see the latest updates without leaving the website. Requires an active X account first.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span><span class="etag etag-nice">Good for engagement</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>📩 Contact Form</strong>
+      <p class="explain">Currently the Contact page shows the ESSF email address. A contact form means visitors can type their name, email, and message directly on the website and it gets delivered to the ESSF inbox — without needing to open their own email app. Works well for parents, donors, or media enquiries.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>🗺️ Interactive Map on Contact Page</strong>
+      <p class="explain">Currently the Contact page has a "Open in Google Maps" link. An embedded map would show the location visually right on the page without needing to click away. The current link is functional — this is a cosmetic upgrade.</p>
+      <div class="tag-row"><span class="etag etag-easy">Quick to build</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>🌐 Hindi Language Support</strong>
+      <p class="explain">Adds a language toggle so visitors can switch the website between English and Hindi. Hindi translations of all content would need to be provided by Monty. Recommended once the English version is stable and approved.</p>
+      <div class="tag-row"><span class="etag etag-medium">Medium effort</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>📅 New Event Pages</strong>
+      <p class="explain">Each year when a new event is held, photos can be compressed and added to the Past Events gallery. This is an ongoing content update, not a feature build — covered under the maintenance plans above.</p>
+      <div class="tag-row"><span class="etag etag-easy">Part of maintenance</span></div>
+    </div>
+
+    <div class="enhance-item">
+      <strong>🗂️ Self-Edit Panel (CMS)</strong>
+      <p class="explain">A "Content Management System" gives Monty an admin login where he can update text, add photos, and change content himself — without needing a developer. This requires rebuilding parts of the site and is a bigger investment. Not needed now, but a good long-term option if the foundation grows.</p>
+      <div class="tag-row"><span class="etag etag-big">Large project</span></div>
+    </div>
+
+  </div>
 
   <div class="note">
-    📌 This document is a summary of work completed and a proposal for future engagement. Pricing to be discussed separately.
+    📌 Pricing for all of the above to be discussed separately. This document is a summary of work completed and a proposal for future engagement.
   </div>
 
 </div>
