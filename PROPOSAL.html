@@ -8,7 +8,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
 
-    /* ---- HEADER ---- */
     .header {
       background: #1a2a4a; color: #fff;
       padding: 2.5rem 2rem; text-align: center;
@@ -21,7 +20,6 @@
     }
     .header .meta span { background: rgba(255,255,255,.1); padding: .25rem .75rem; border-radius: 20px; }
 
-    /* ---- LAYOUT ---- */
     .container { max-width: 900px; margin: 2rem auto; padding: 0 1.25rem 5rem; }
 
     h2 {
@@ -38,35 +36,28 @@
       font-size: .85rem; flex-shrink: 0;
     }
 
-    /* ---- WORK ITEMS ---- */
+    /* WORK ITEMS */
     .work-list { display: flex; flex-direction: column; gap: .75rem; }
     .work-item {
       background: #fff; border-radius: 8px;
       box-shadow: 0 1px 6px rgba(0,0,0,.07);
-      display: grid; grid-template-columns: 2.5rem 1fr auto;
+      display: grid; grid-template-columns: 2.5rem 1fr;
       align-items: start; gap: 1rem; padding: 1rem 1.25rem;
     }
     .work-item .icon { font-size: 1.5rem; padding-top: .1rem; }
     .work-item .info strong { display: block; color: #1a2a4a; font-size: .97rem; margin-bottom: .2rem; }
     .work-item .info p { font-size: .85rem; color: #666; }
-    .work-item .price {
-      text-align: right; white-space: nowrap;
-      font-weight: bold; color: #1a2a4a; font-size: .95rem;
-    }
-    .work-item .price small { display: block; font-weight: normal; color: #999; font-size: .78rem; }
 
-    /* ---- TOTAL BOX ---- */
-    .total-box {
+    /* SUMMARY BOX */
+    .summary-box {
       background: #1a2a4a; color: #fff;
       border-radius: 8px; padding: 1.25rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      margin-top: 1rem; flex-wrap: wrap; gap: .5rem;
+      margin-top: 1rem;
     }
-    .total-box .label { font-size: 1rem; opacity: .85; }
-    .total-box .amount { font-size: 1.6rem; font-weight: bold; color: #FF6B00; }
-    .total-box .range { font-size: .85rem; opacity: .6; }
+    .summary-box .label { font-size: 1rem; font-weight: bold; margin-bottom: .25rem; }
+    .summary-box .range { font-size: .88rem; opacity: .75; }
 
-    /* ---- MAINTENANCE TABLE ---- */
+    /* MAINTENANCE */
     .plan-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -84,17 +75,12 @@
       padding: .15rem .6rem; border-radius: 20px;
       display: inline-block; margin-bottom: .5rem;
     }
-    .plan-card h3 { color: #1a2a4a; font-size: 1rem; margin-bottom: .25rem; }
-    .plan-card .plan-price {
-      font-size: 1.5rem; font-weight: bold; color: #FF6B00;
-      margin: .5rem 0;
-    }
-    .plan-card .plan-price small { font-size: .8rem; font-weight: normal; color: #999; }
-    .plan-card ul { list-style: none; text-align: left; font-size: .83rem; color: #555; margin-top: .75rem; }
+    .plan-card h3 { color: #1a2a4a; font-size: 1rem; margin-bottom: .5rem; }
+    .plan-card ul { list-style: none; text-align: left; font-size: .83rem; color: #555; margin-top: .5rem; }
     .plan-card ul li { padding: .2rem 0; padding-left: 1.2rem; position: relative; }
     .plan-card ul li::before { content: '✓'; position: absolute; left: 0; color: #138808; font-weight: bold; }
 
-    /* ---- ENHANCEMENTS TABLE ---- */
+    /* ENHANCEMENTS */
     .enhancements { width: 100%; border-collapse: collapse; margin-top: .5rem; }
     .enhancements th {
       background: #1a2a4a; color: #fff;
@@ -103,31 +89,21 @@
     .enhancements td { padding: .75rem 1rem; font-size: .88rem; border-bottom: 1px solid #eee; background: #fff; }
     .enhancements tr:last-child td { border-bottom: none; }
     .enhancements tr:hover td { background: #fafafa; }
-    .enhancements td:last-child { font-weight: bold; color: #1a2a4a; white-space: nowrap; }
     .enhancements td .desc { font-size: .78rem; color: #888; display: block; margin-top: .15rem; }
 
-    /* ---- PROD PUSH ---- */
+    /* PROD PUSH */
     .push-box {
       background: #fff; border-radius: 8px;
       box-shadow: 0 1px 6px rgba(0,0,0,.07);
       padding: 1.25rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
     }
-    .push-box .push-info strong { display: block; color: #1a2a4a; margin-bottom: .25rem; }
-    .push-box .push-info p { font-size: .85rem; color: #666; }
-    .push-box .push-price { font-size: 1.3rem; font-weight: bold; color: #FF6B00; white-space: nowrap; }
+    .push-box strong { display: block; color: #1a2a4a; margin-bottom: .25rem; }
+    .push-box p { font-size: .85rem; color: #666; }
 
-    /* ---- NOTE ---- */
     .note {
       background: #fffbe6; border: 1px solid #ffe082;
       border-radius: 6px; padding: 1rem 1.25rem;
       font-size: .85rem; color: #666; margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      .work-item { grid-template-columns: 2rem 1fr; }
-      .work-item .price { grid-column: 2; }
     }
   </style>
 </head>
@@ -135,7 +111,7 @@
 
 <div class="header">
   <h1>Ek Soach Saathiya Foundation — Website Project</h1>
-  <p class="sub">Work Summary, Pricing & Maintenance Proposal</p>
+  <p class="sub">Work Summary & Maintenance Proposal</p>
   <div class="meta">
     <span>📅 May 2026</span>
     <span>🌐 eksoach.in</span>
@@ -145,7 +121,7 @@
 
 <div class="container">
 
-  <!-- ===== SECTION 1: WORK DELIVERED ===== -->
+  <!-- SECTION 1 -->
   <h2><span class="num">1</span> Work Delivered — Initial Build</h2>
 
   <div class="work-list">
@@ -156,7 +132,6 @@
         <strong>5-Page Custom Website</strong>
         <p>Built from scratch — Home, Executives, Past Events, Social Activity, Contact. Pure HTML/CSS/JS, no frameworks. Designed to load fast even on slow mobile connections. Includes hero slider, activity cards, photo gallery, and footer.</p>
       </div>
-      <div class="price">₹15,000–20,000<small>core build</small></div>
     </div>
 
     <div class="work-item">
@@ -165,7 +140,6 @@
         <strong>Fully Responsive Design</strong>
         <p>Works on all screen sizes — iPhone, Android, iPad, laptop, and desktop. Separate layouts for mobile (≤480px), tablet (≤900px), and desktop. Navigation becomes a hamburger menu on smaller screens with a fixed iOS-compatible touch target.</p>
       </div>
-      <div class="price">Included<small>in core build</small></div>
     </div>
 
     <div class="work-item">
@@ -174,7 +148,6 @@
         <strong>221 Photos — Compressed & Organised</strong>
         <p>All photos received were compressed to optimised thumbnails (~25KB each) using a Python script, reducing total size from several GBs to ~6MB. Organised into dated event folders. Past Events page shows first 8 photos per event with a "Show all" button to avoid endless scrolling.</p>
       </div>
-      <div class="price">₹3,000–5,000<small>photo management</small></div>
     </div>
 
     <div class="work-item">
@@ -183,74 +156,62 @@
         <strong>Hero Slider — Touch, Swipe & Trackpad</strong>
         <p>4-slide hero banner with auto-advance every 5 seconds. Supports: tap on arrow buttons, dot navigation, finger swipe on mobile, two-finger trackpad swipe on MacBook, and click-and-drag on desktop mouse.</p>
       </div>
-      <div class="price">Included<small>in core build</small></div>
     </div>
 
     <div class="work-item">
       <div class="icon">⚙️</div>
       <div class="info">
         <strong>CI/CD Pipeline & Deploy Tooling</strong>
-        <p>GitHub Actions workflow that automatically updates cache-busting version strings on every code push, so visitors always get the latest CSS and JS. One-command deploy script (<code>deploy.sh</code>) that packages the site for FTP upload to the production server — strips dev files, injects version strings, outputs a clean folder ready to upload.</p>
+        <p>GitHub Actions workflow that automatically updates cache-busting version strings on every code push, so visitors always get the latest CSS and JS. One-command deploy script that packages the site for FTP upload to the production server — strips dev files, injects version strings, outputs a clean folder ready to upload.</p>
       </div>
-      <div class="price">₹3,000–5,000<small>devops tooling</small></div>
     </div>
 
     <div class="work-item">
       <div class="icon">🔒</div>
       <div class="info">
         <strong>Security Audit & Hardening</strong>
-        <p>Full security review — checked all external links for proper <code>rel="noopener noreferrer"</code>, verified no XSS risks, no inline event handlers, no exposed credentials. Added Apache <code>.htaccess</code> with HTTPS redirect, gzip compression, browser cache headers (1 year for assets), and security response headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy).</p>
+        <p>Full security review — checked all external links, verified no XSS risks, no inline event handlers, no exposed credentials. Added Apache configuration with HTTPS redirect, gzip compression, browser cache headers (1 year for assets), and security response headers.</p>
       </div>
-      <div class="price">₹3,000–5,000<small>security + devops</small></div>
     </div>
 
     <div class="work-item">
       <div class="icon">♿</div>
       <div class="info">
-        <strong>Accessibility Fixes</strong>
+        <strong>Accessibility</strong>
         <p>ARIA labels on all interactive elements (slider dots, show-more button, hamburger menu). Keyboard-navigable nav. Proper alt text on all images. Semantic HTML structure throughout. Screen reader compatible.</p>
       </div>
-      <div class="price">Included<small>in iterations</small></div>
     </div>
 
     <div class="work-item">
       <div class="icon">🐛</div>
       <div class="info">
         <strong>Iterations, Debugging & Testing</strong>
-        <p>iOS hamburger menu fix (tap target size, z-index, position:fixed dropdown), browser cache-busting across 3 rounds of deployment, slider overflow fix, nav logo responsive sizing across 3 breakpoints, tagline strip styling consistency, gallery collapse feature, trackpad swipe detection.</p>
+        <p>iOS hamburger menu fix, browser cache-busting across multiple rounds of deployment, slider overflow fix, nav logo responsive sizing across 3 breakpoints, tagline strip styling, gallery collapse feature, trackpad swipe detection.</p>
       </div>
-      <div class="price">₹3,000–5,000<small>QA & fixes</small></div>
     </div>
 
   </div>
 
-  <div class="total-box">
-    <div>
-      <div class="label">Total — Initial Build</div>
-      <div class="range">Complete website, tested across mobile / tablet / desktop / iOS / macOS</div>
-    </div>
-    <div class="amount">₹25,000–35,000</div>
+  <div class="summary-box">
+    <div class="label">✅ Initial Build — Complete</div>
+    <div class="range">Fully tested across mobile / tablet / desktop / iOS / macOS. Ready for production deployment.</div>
   </div>
 
-  <!-- ===== SECTION 2: PRODUCTION PUSH ===== -->
+  <!-- SECTION 2 -->
   <h2><span class="num">2</span> Production Push — Deploy to eksoach.in</h2>
 
   <div class="push-box">
-    <div class="push-info">
-      <strong>One-time production deployment</strong>
-      <p>Run deploy script → FTP upload to hosting server → configure custom domain → verify HTTPS, all 5 pages, contact email, and mobile layout on live domain. Fix any hosting-specific issues.</p>
-    </div>
-    <div class="push-price">₹1,500–2,500</div>
+    <strong>One-time production deployment</strong>
+    <p>Run deploy script → FTP upload to hosting server → configure custom domain → verify HTTPS, all 5 pages, and mobile layout on live domain. Fix any hosting-specific issues that arise.</p>
   </div>
 
-  <!-- ===== SECTION 3: MAINTENANCE ===== -->
+  <!-- SECTION 3 -->
   <h2><span class="num">3</span> Maintenance Plans</h2>
 
   <div class="plan-grid">
 
     <div class="plan-card">
       <h3>Basic</h3>
-      <div class="plan-price">₹6,000<small> / year</small></div>
       <ul>
         <li>Up to 2 content updates / year</li>
         <li>Add new event photos (1 event)</li>
@@ -263,7 +224,6 @@
     <div class="plan-card recommended">
       <div class="rec-tag">RECOMMENDED</div>
       <h3>Standard</h3>
-      <div class="plan-price">₹12,000<small> / year</small></div>
       <ul>
         <li>Up to 5 content updates / year</li>
         <li>Add new event photos (up to 3 events)</li>
@@ -276,7 +236,6 @@
 
     <div class="plan-card">
       <h3>Active</h3>
-      <div class="plan-price">₹24,000<small> / year</small></div>
       <ul>
         <li>Unlimited content updates</li>
         <li>New event pages as needed</li>
@@ -289,7 +248,7 @@
 
   </div>
 
-  <!-- ===== SECTION 4: ENHANCEMENTS ===== -->
+  <!-- SECTION 4 -->
   <h2><span class="num">4</span> Future Enhancements — Per Request</h2>
 
   <table class="enhancements">
@@ -297,97 +256,54 @@
       <tr>
         <th>Feature</th>
         <th>What it involves</th>
-        <th>Estimated Cost</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>
-          Impact / Numbers Section
-          <span class="desc">e.g. "₹3.5L donated · 40 students · 3 events"</span>
-        </td>
-        <td>New section on home page with animated counters, stats from client</td>
-        <td>₹2,000–3,000</td>
+        <td>Impact / Numbers Section<span class="desc">e.g. "₹3.5L donated · 40 students · 3 events"</span></td>
+        <td>New section on home page with stats provided by client</td>
       </tr>
       <tr>
-        <td>
-          Hindi Language Support
-          <span class="desc">Bilingual content in Devanagari</span>
-        </td>
+        <td>Hindi Language Support<span class="desc">Bilingual content in Devanagari</span></td>
         <td>Language toggle, translated content provided by client, font loading</td>
-        <td>₹5,000–8,000</td>
       </tr>
       <tr>
-        <td>
-          Contact Form with Email
-          <span class="desc">Visitor sends message directly from website</span>
-        </td>
-        <td>Form UI + email delivery via Formspree or similar (no server needed)</td>
-        <td>₹3,000–5,000</td>
+        <td>Contact Form with Email<span class="desc">Visitor sends message directly from website</span></td>
+        <td>Form UI + email delivery via third-party service (no server needed)</td>
       </tr>
       <tr>
-        <td>
-          New Event Page
-          <span class="desc">Each new annual event added to Past Events</span>
-        </td>
+        <td>New Event Page<span class="desc">Each new annual event added to Past Events</span></td>
         <td>Compress & add photos, create event block, update photo count</td>
-        <td>₹1,500–2,500</td>
       </tr>
       <tr>
-        <td>
-          Testimonials Section
-          <span class="desc">Quotes from scholarship recipients / parents</span>
-        </td>
+        <td>Testimonials Section<span class="desc">Quotes from scholarship recipients / parents</span></td>
         <td>New section on home page with photo + quote cards</td>
-        <td>₹2,000–3,500</td>
       </tr>
       <tr>
-        <td>
-          Donation / Bank Details Page
-          <span class="desc">Static page with UPI, bank details for donors</span>
-        </td>
+        <td>Donation / Bank Details Page<span class="desc">Static page with UPI, bank details for donors</span></td>
         <td>New inner page, nav update, QR code if provided</td>
-        <td>₹1,500–2,500</td>
       </tr>
       <tr>
-        <td>
-          Google Maps Embed
-          <span class="desc">Interactive map on Contact page</span>
-        </td>
-        <td>Replace current link with embedded map iframe</td>
-        <td>₹500–1,000</td>
+        <td>Google Maps Embed<span class="desc">Interactive map on Contact page</span></td>
+        <td>Replace current link with embedded map</td>
       </tr>
       <tr>
-        <td>
-          CMS Integration
-          <span class="desc">So client can edit content without a developer</span>
-        </td>
-        <td>Migrate to a headless CMS (Netlify CMS / Decap). Significant rebuild.</td>
-        <td>₹18,000–28,000</td>
+        <td>CMS Integration<span class="desc">So client can update content without a developer</span></td>
+        <td>Migrate to a headless CMS. Significant rebuild.</td>
       </tr>
       <tr>
-        <td>
-          WhatsApp Chat Button
-          <span class="desc">Floating button to message on WhatsApp</span>
-        </td>
+        <td>WhatsApp Chat Button<span class="desc">Floating button to message on WhatsApp</span></td>
         <td>Sticky floating button, pre-filled message, all pages</td>
-        <td>₹500–1,000</td>
       </tr>
       <tr>
-        <td>
-          Social Media Feed
-          <span class="desc">Live Instagram / Facebook posts on site</span>
-        </td>
+        <td>Social Media Feed<span class="desc">Live Instagram / Facebook posts on site</span></td>
         <td>Embedded feed widget, requires social account access</td>
-        <td>₹2,000–4,000</td>
       </tr>
     </tbody>
   </table>
 
   <div class="note">
-    💡 All prices above are estimates. Final cost depends on scope, content availability, and turnaround time. Enhancements under ₹2,000 can be bundled and done in a single session.
-    <br><br>
-    📌 <strong>Payment terms suggestion:</strong> 50% advance, 50% on delivery. For maintenance plans, full year upfront.
+    📌 This document is a summary of work completed and a proposal for future engagement. Pricing to be discussed separately.
   </div>
 
 </div>
