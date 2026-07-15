@@ -15,6 +15,10 @@
       padding-left: .75rem; margin-bottom: 1rem;
     }
     .event-date .count { font-weight: normal; color: #888; font-size: .9rem; }
+    .event-video { max-width: 720px; margin: 0 0 1.5rem; }
+    .event-video .video-wrap { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; }
+    .event-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .event-note { color: #888; font-size: .9rem; font-style: italic; }
   </style>
 </head>
 <body>
@@ -45,6 +49,16 @@
 <section>
   <div class="container">
 
+
+  <div class="event-group">
+    <h3 class="event-date">Bharat Mandapam Event <span class="count">— 4 July 2026</span></h3>
+    <div class="event-video">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/ii1KmRe2GaM" title="ESSF event — 4 July 2026, Bharat Mandapam" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <p class="event-note">Photo gallery coming soon.</p>
+  </div>
 
   <div class="event-group">
     <h3 class="event-date">Symposium: Save Environment &amp; Kavi Sammelan <span class="count">— 6 July 2024 &nbsp;·&nbsp; PHD Chambers Auditorium, New Delhi &nbsp;·&nbsp; 67 photos</span></h3>
