@@ -96,18 +96,14 @@ Sh. Jagdish Lal Sehgal (Director-cum-General Secretary, full bio + photo) and Sh
   and would eat the quota fast) and not dumped on the public channel (Unlisted keeps them off
   the channel page, search, and subscriber feed, while still being fully embeddable — this is
   what satisfies the earlier "don't upload to the channel" ask).
-- ~~**Video section — RESOLVED ✅ (2026-08-14)**~~ Monty already uploaded all 20 videos (Teaser +
+- ~~**Video section — RESOLVED ✅ (2026-08-15)**~~ Monty already uploaded all 20 videos (Teaser +
   Inauguration/Awards + 17 Performances + the separately-embedded Full Event) as Unlisted and
   built the playlist himself — no channel credentials were needed on our side, just the working
   link (`youtube.com/playlist?list=PLd1Wuaft1X9c` — the earlier copy with the `&si=...` param
-  looked truncated but the base link resolves fine). Per Monty's answer, embedded the first 3 of
-  the 18 clips directly (Inauguration & Awards, Performance 1, Performance 2 — video IDs pulled
-  straight off the live playlist page), plus a 4th card linking out to the full playlist, in
-  `pages/past-events.html` under the Bharat Mandapam event group.
-  **Assumption to confirm with Monty:** "first 3" was read as the first 3 of the 18 numbered
-  clips, skipping the Teaser (which is tracked separately above) — if he meant literal playlist
-  order (Teaser, Inauguration/Awards, Performance 1) instead, swap the first embed for the
-  Teaser's video ID (`g8RIUvPbqqI`).
+  looked truncated but the base link resolves fine). Final "Event Highlights" set (Saketh's call,
+  2026-08-15): Teaser, Inauguration & Awards, Performance 1, Performance 2 all embedded directly,
+  plus a 5th card linking out to the full playlist — in `pages/past-events.html` under the Bharat
+  Mandapam event group. The Full Event video stays embedded separately above this section.
 - **Still open:**
   1. The 222-photo gallery for this event is still pending — photos need to be pulled from the
      shared Drive folder and run through `scripts/optimize-images.py` (see item 8).
