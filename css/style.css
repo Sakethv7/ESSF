@@ -225,17 +225,6 @@ section:nth-child(even) { background: var(--bg-light); }
   pointer-events: none;
 }
 .gallery-item:hover .overlay { opacity: 1; }
-.gallery-item.gallery-hidden { display: none; }
-
-.gallery-show-more {
-  display: block; margin: 1.25rem auto 0;
-  background: var(--navy); color: #fff;
-  border: none; border-radius: var(--radius);
-  padding: .6rem 1.75rem;
-  font-family: Arial, sans-serif; font-size: .9rem;
-  cursor: pointer; transition: background .2s;
-}
-.gallery-show-more:hover { background: var(--saffron); }
 
 /* ===== GALLERY LIGHTBOX ===== */
 .lightbox {

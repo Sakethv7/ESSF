@@ -80,27 +80,6 @@ if (heroEl) {
   }
 }
 
-// ===== GALLERY COLLAPSE =====
-// Show first 8 photos per event group; rest hidden behind "Show all" button
-document.querySelectorAll('.event-group .gallery-grid').forEach(grid => {
-  const items = grid.querySelectorAll('.gallery-item');
-  if (items.length <= 8) return;
-
-  items.forEach((item, i) => {
-    if (i >= 8) item.classList.add('gallery-hidden');
-  });
-
-  const btn = document.createElement('button');
-  btn.className = 'gallery-show-more';
-  btn.textContent = `Show all ${items.length} photos`;
-  btn.setAttribute('aria-label', `Show all ${items.length} photos in this event`);
-  btn.addEventListener('click', () => {
-    grid.querySelectorAll('.gallery-hidden').forEach(el => el.classList.remove('gallery-hidden'));
-    btn.remove();
-  });
-  grid.after(btn);
-});
-
 // ===== GALLERY LIGHTBOX =====
 const galleryLinks = Array.from(document.querySelectorAll('.gallery-item a[href]'));
 if (galleryLinks.length) {

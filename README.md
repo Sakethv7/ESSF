@@ -43,9 +43,10 @@ essf-website/
 │   ├── images/
 │   │   ├── home/          (7 photos — hero banners + event shots)
 │   │   ├── events/
-│   │   │   ├── 06-07-2024/   (67 photos — Symposium: Save Environment & Kavi Sammelan)
-│   │   │   ├── 07-04-2024/   (14 photos — Annual Felicitation Ceremony)
-│   │   │   └── 09-07-2023/   (140 photos — Kavi Sammelan with Musical Program)
+│   │   │   ├── 04-07-2026/   (22 photos — ESSF Samman Scholarship & Cultural Fest, Bharat Mandapam)
+│   │   │   ├── 06-07-2024/   (67 photos on disk, 8 shown on site — Symposium: Save Environment & Kavi Sammelan)
+│   │   │   ├── 07-04-2024/   (14 photos on disk, 8 shown on site — Vaisakhi Celebration & Felicitation Ceremony)
+│   │   │   └── 09-07-2023/   (140 photos on disk, 8 shown on site — Kavi Sammelan with Musical Program)
 │   │   └── social/        (8 photos — donations, clay bottles, covid relief)
 │   └── logos/
 │       ├── ek1logo.png    (horizontal banner — circular seal + org name + tagline, used in nav on all pages)
