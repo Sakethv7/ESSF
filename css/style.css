@@ -206,6 +206,18 @@ section:nth-child(even) { background: var(--bg-light); }
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: .75rem;
 }
+.gallery-grid-centered {
+  grid-template-columns: repeat(3, minmax(200px, 260px));
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .gallery-grid-centered { grid-template-columns: repeat(auto-fit, minmax(200px, 260px)); }
+}
+
+/* ===== INLINE VIDEO EMBED (home page) ===== */
+.latest-event-video { max-width: 640px; margin: 0 auto 1.5rem; }
+.latest-event-video .video-wrap { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; }
+.latest-event-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius); aspect-ratio: 4/3; cursor: zoom-in; }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover;
