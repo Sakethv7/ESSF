@@ -34,13 +34,19 @@
     .clip-playlist .clip-playlist-icon { display: block; font-size: 1.6rem; margin-bottom: .4rem; }
 
     .gallery-item--hidden { display: none; }
-    .gallery-item a.gallery-more {
+    /* Not a .gallery-item: main.js binds the lightbox to every .gallery-item a[href]
+       and preventDefault()s it, which would stop this link navigating. */
+    .gallery-link-tile {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius); aspect-ratio: 4/3;
+    }
+    a.gallery-more {
       display: flex; align-items: center; justify-content: center; text-align: center;
       height: 100%; text-decoration: none;
       background: var(--navy); color: #fff; font-family: Arial, sans-serif; font-size: .85rem;
       padding: 1rem; transition: background .2s;
     }
-    .gallery-item a.gallery-more:hover { background: var(--saffron); }
+    a.gallery-more:hover { background: var(--saffron); }
     .gallery-more .gallery-more-icon { display: block; font-size: 1.6rem; margin-bottom: .4rem; }
 
     .video-thumb {
@@ -102,7 +108,7 @@
 
 
   <div class="event-group">
-    <h3 class="event-date">ESSF Samman, Scholarship &amp; Cultural Fest <span class="count">— 4 July 2026 &nbsp;·&nbsp; 22 photos</span></h3>
+    <h3 class="event-date">ESSF Samman, Scholarship &amp; Cultural Fest <span class="count">— 4 July 2026 &nbsp;·&nbsp; 222 photos</span></h3>
     <div class="gallery-grid">
         <div class="gallery-item"><a href="../assets/images/events/04-07-2026/DSC_0132.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_0132.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item"><a href="../assets/images/events/04-07-2026/DSC_0176AB.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_0176AB.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
@@ -111,14 +117,15 @@
         <div class="gallery-item"><a href="../assets/images/events/04-07-2026/DSC_0982.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_0982.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item"><a href="../assets/images/events/04-07-2026/DSC_1003.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1003.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item"><a href="../assets/images/events/04-07-2026/DSC_1005.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1005.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
-        <div class="gallery-item">
-          <a href="../assets/images/events/04-07-2026/DSC_1008.jpg" class="gallery-more" target="_blank" rel="noopener">
+        <div class="gallery-link-tile">
+          <a href="gallery-bharat-mandapam.html" class="gallery-more">
             <span>
               <span class="gallery-more-icon">&#8853;</span>
-              View Full Collection<br>+15 more photos
+              View Full Collection<br>all 222 photos
             </span>
           </a>
         </div>
+        <div class="gallery-item gallery-item--hidden"><a href="../assets/images/events/04-07-2026/DSC_1008.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1008.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item gallery-item--hidden"><a href="../assets/images/events/04-07-2026/DSC_1025.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1025.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item gallery-item--hidden"><a href="../assets/images/events/04-07-2026/DSC_1068.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1068.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>
         <div class="gallery-item gallery-item--hidden"><a href="../assets/images/events/04-07-2026/DSC_1139.jpg" target="_blank" rel="noopener"><img src="../assets/images/events/04-07-2026/DSC_1139.jpg" alt="ESSF event 4 July 2026" loading="lazy" /></a><div class="overlay">View Full</div></div>

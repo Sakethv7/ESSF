@@ -23,6 +23,7 @@ rm -f  _deploy/FOR_MONTY.html
 rm -f  _deploy/PROPOSAL.html
 rm -f  _deploy/SESSION_HANDOFF*
 rm -rf _deploy/skills/
+rm -rf _deploy/docs
 
 # Inject current SHA as cache-buster in all HTML files
 find _deploy -name "*.html" \
@@ -62,5 +63,6 @@ echo "Files to verify after upload:"
 echo "  https://eksoach.in/              → Home page"
 echo "  https://eksoach.in/pages/executives.html"
 echo "  https://eksoach.in/pages/past-events.html"
+echo "  https://eksoach.in/pages/gallery-bharat-mandapam.html  → 222-photo gallery"
 echo "  https://eksoach.in/pages/social-activity.html"
 echo "  https://eksoach.in/pages/contact.html"

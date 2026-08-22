@@ -13,7 +13,8 @@ A Foundation of CGST & Customs Officers (Retired & Serving), Delhi. Incorporated
 |------|-------------|
 | `index.html` | Home — hero slider, What We Do, Activities, Gallery, Contact strip |
 | `pages/executives.html` | Executive team — photo cards with name and title |
-| `pages/past-events.html` | Event gallery — 221 photos across 3 dated events |
+| `pages/past-events.html` | Event gallery — curated sets across 4 dated events |
+| `pages/gallery-bharat-mandapam.html` | Full 222-photo gallery for the 4 July 2026 event |
 | `pages/social-activity.html` | Social initiatives — highlights + 8 photos |
 | `pages/contact.html` | Address, email, Google Maps link |
 
@@ -23,9 +24,11 @@ A Foundation of CGST & Customs Officers (Retired & Serving), Delhi. Incorporated
 
 Pure HTML + CSS + vanilla JS. No frameworks, no build tools. Designed to load on 2G connections and basic Android browsers.
 
-- Images compressed to ≤500px thumbnails (~25KB each) using Pillow
-- All photos lazy-loaded (`loading="lazy"`)
-- Total image assets: ~6MB for 236 thumbnails
+- Images compressed with Pillow via `scripts/optimize-images.py`
+- Galleries on `past-events.html` use one 1600px tier (~225KB each)
+- The 222-photo gallery uses two tiers: 500px thumbnails (~31KB) in the grid, 1600px in the lightbox
+- All photos lazy-loaded (`loading="lazy"`), so page cost is proportional to how far you scroll
+- Total image assets: ~67MB, of which the 4 July 2026 event is ~59MB
 
 ---
 
@@ -37,13 +40,14 @@ essf-website/
 ├── pages/
 │   ├── executives.html
 │   ├── past-events.html
+│   ├── gallery-bharat-mandapam.html
 │   ├── social-activity.html
 │   └── contact.html
 ├── assets/
 │   ├── images/
 │   │   ├── home/          (7 photos — hero banners + event shots)
 │   │   ├── events/
-│   │   │   ├── 04-07-2026/   (22 photos — ESSF Samman Scholarship & Cultural Fest, Bharat Mandapam)
+│   │   │   ├── 04-07-2026/   (222 photos + thumbs/ — ESSF Samman Scholarship & Cultural Fest, Bharat Mandapam)
 │   │   │   ├── 06-07-2024/   (67 photos on disk, 8 shown on site — Symposium: Save Environment & Kavi Sammelan)
 │   │   │   ├── 07-04-2024/   (14 photos on disk, 8 shown on site — Vaisakhi Celebration & Felicitation Ceremony)
 │   │   │   └── 09-07-2023/   (140 photos on disk, 8 shown on site — Kavi Sammelan with Musical Program)

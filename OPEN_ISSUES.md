@@ -82,9 +82,8 @@ Sh. Jagdish Lal Sehgal (Director-cum-General Secretary, full bio + photo) and Sh
   certificates, adult trophy awards, sponsor thank-you, and 4 performance shots (dance + singing).
   Two source photos (`DSC_1025.jpg`, `DSC_1199A_05.jpg`) had no EXIF rotation flag despite being
   shot in portrait — manually rotated 90° before optimizing.
-- **Still to do:** The remaining ~200 photos from the Drive folder, for the full-222 publish Monty
-  originally asked for (not a curated 30–60 — the filenames are just his personal ordering, we
-  can rename freely).
+- ~~**Still to do:** The remaining ~200 photos~~ — **RESOLVED ✅ (2026-08-21)** All 222 are live on a
+  dedicated page, `pages/gallery-bharat-mandapam.html`. See "222-photo gallery" below.
 - **Sources shared:**
   - Photos: `drive.google.com/drive/folders/1LjINm4bXNpIQdWcG-vboCsVYQst2pYR5`
   - 18 video clips: `drive.google.com/drive/folders/12AWuzUjn3_c4uagxi3fP0n8ox1JfAb3e`
@@ -104,14 +103,33 @@ Sh. Jagdish Lal Sehgal (Director-cum-General Secretary, full bio + photo) and Sh
   2026-08-15): Teaser, Inauguration & Awards, Performance 1, Performance 2 all embedded directly,
   plus a 5th card linking out to the full playlist — in `pages/past-events.html` under the Bharat
   Mandapam event group. The Full Event video stays embedded separately above this section.
-- **Still open:**
-  1. The 222-photo gallery for this event is still pending — photos need to be pulled from the
-     shared Drive folder and run through `scripts/optimize-images.py` (see item 8).
-  2. Whether the Short Teaser should also be embedded on-page somewhere (e.g. above the Full
-     Event video), or is only meant for sharing outside the site.
-- **How to add photos once pulled:** `scripts/optimize-images.py` into
-  `assets/images/events/04-07-2026/`, then add `.gallery-item` blocks matching the pattern used
-  for the 06-07-2024 event group.
+- ~~**222-photo gallery**~~ — **RESOLVED ✅ (2026-08-21)**
+  - All 222 photos pulled from Drive, compressed, and published at `pages/gallery-bharat-mandapam.html`.
+    `past-events.html` keeps its curated 22; its "+15 more" tile is now a "View Full Collection —
+    all 222 photos" link to the new page.
+  - **The photos were not in the folder Monty shared.** That folder holds a `Photos` subfolder
+    (`12PCLhyLQlAps8Hng_GHlSaXdQEFglHeq`) plus a stray `Short Video (1).mp4`. Target the subfolder.
+  - **Two image tiers:** full 1600px/q82 in `04-07-2026/` (51.6 MB) for the lightbox, thumbnails
+    500px/q78 in `04-07-2026/thumbs/` (7.4 MB) for the grid. A visitor scrolling the whole gallery
+    pulls ~7 MB, not ~52 MB. Tile `src` → thumbnail, `href` → full size.
+  - **New tooling:** `scripts/fetch-drive-folder.py` (enumerate + resumable download) and
+    `scripts/build-gallery.py` (emits tiles between marker comments, re-runnable).
+    `scripts/optimize-images.py` gained `--max-dim` / `--quality`; defaults unchanged.
+  - **Filenames are sanitised, not renamed.** 82 of the 222 were `DSC_1199A (N).JPG` — spaces and
+    parentheses that don't belong in a URL. Rule: `DSC_1199A (5)` → `DSC_1199A_05`, `DSC_460` →
+    `DSC_0460`. This reproduces exactly what the previous session did by hand. Original Drive names
+    are preserved in `docs/04-07-2026-photo-manifest.json` as the join column for item 4.
+  - **5 photos needed 90° CCW rotation**, not the 2 previously known: `DSC_1025`, `DSC_1199A_05`,
+    and newly found `DSC_1199A_15`, `DSC_1199A_19`, `DSC_1199A_47`. EXIF cannot detect these —
+    127 of 128 sampled files are landscape with no rotation flag, so metadata is useless here.
+    They were found by eyeballing contact sheets of the thumbnails. **Any future batch needs that
+    same visual pass; there is no automated check.**
+- **Still open:** Whether the Short Teaser should also be embedded on-page somewhere (e.g. above the
+  Full Event video), or is only meant for sharing outside the site.
+- **How to add photos for a future event:** `scripts/fetch-drive-folder.py` into a staging folder
+  outside the repo, `scripts/optimize-images.py` twice (full + `--max-dim 500 --quality 78`), check
+  contact sheets for rotation, then `scripts/build-gallery.py`. Full walkthrough in
+  `docs/logic_flow.md`.
 
 ---
 
